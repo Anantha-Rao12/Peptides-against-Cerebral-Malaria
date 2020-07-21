@@ -2,7 +2,7 @@ import os
 import subprocess
 import time
 import pandas as pd
-#from chimera import runCommand as rc
+#from chimera import runCommand as rc  
 
 
 def saturated_mutagenesis(model_no,chain_name,start_residue,stop_residue,input_path,file_name,output_path):
@@ -23,8 +23,6 @@ def saturated_mutagenesis(model_no,chain_name,start_residue,stop_residue,input_p
 def AnalyseComplex(foldx_path, file_full_path, output_full_path):
 	
 	data=[]
-	#os.chdir(output_full_path)
-	#os.chdir(file_full_path)
 	start = time.time()
 	process = subprocess.Popen(f'{foldx_path} --command=AnalyseComplex --pdb={file_full_path} --analyseComplexChains=A,B', shell=True, stdout=subprocess.PIPE)
 	result = process.communicate()[0] 
@@ -45,7 +43,6 @@ def make_df_combine(files_path1,files_path2,output_path):
 				lines = rf.read().splitlines()
 				data = lines[-1].split('\t')
 				header = lines[-2].split('\t')
-				#print(header)
 				listoflists.append(data)
 	df = pd.DataFrame(listoflists,columns=header)
 	os.chdir(output_path)
