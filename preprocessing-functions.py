@@ -2,10 +2,16 @@ import os
 import subprocess
 import time
 import pandas as pd
-#from chimera import runCommand as rc  
+#from chimera import runCommand as rc  (# uncomment if running within UCSF Chimera )
 
 
 def saturated_mutagenesis(model_no,chain_name,start_residue,stop_residue,input_path,file_name,output_path):
+	
+	''' This function performs saturated mutagenesis over a given peptide and returns all mutant PDB files at output_path
+	    model_no is the model number assigned to the parent PDB
+	    chain_name refers to the chain_id where SM is to be performed ('a'/'b'/'c'/ ...)
+	    start_residue and stop_residue denote the residue numbers that are in continuous sequence for SM 
+	    input_path refers to the directory containing the parent PDB whose name is file_name '''
 
 	aa_data = 'ala arg asn asp cys glu gln gly his ile leu lys met phe pro ser thr trp tyr val'.split()
 	
