@@ -33,12 +33,18 @@ def AnalyseComplex(foldx_path, file_full_path, output_full_path):
 	return data
 	
 
-def make_df_combine(files_path1,files_path2,output_path):
+def make_df_combine(files_path1,files_path2,output_path,csv_file_name):
+	
+	''' This function visits files_path1 and files_path2 to collect all foldx Summary.fxout files that was created by AnalyseComplex command.
+	With os.listdir each file name is stored in lists called 'foldx_summary_files' via list comprehension. We then open each .fxout Summary file with 
+	a context manager and store the last line of the file which has the required interaction data (tab separated). A list of lists is thus created 
+	and finally grafted into a dataframe with Pandas that is written as a .csv file to the given 'output_path' with 'csv_file_name'. '''
 	
 	listoflists =[]
 	paths= [files_path1,files_path2]
 	for path in paths:
-		for file in os.listdir(path):
+		foldx_summary_files = [file for file in os.listdir(path) if file.startswith('Summary')]
+		for file in os.listdir(foldx_summary_files):
 			with open(os.path.join(path,file),'r') as rf:
 				lines = rf.read().splitlines()
 				data = lines[-1].split('\t')
@@ -46,7 +52,7 @@ def make_df_combine(files_path1,files_path2,output_path):
 				listoflists.append(data)
 	df = pd.DataFrame(listoflists,columns=header)
 	os.chdir(output_path)
-	df.to_csv(os.path.join(output_path,'scoring-repeat-1.csv'))
+	df.to_csv(os.path.join(output_path,csv_file_name))
 
 
 	
