@@ -3,17 +3,20 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import json
 
-path = 'D:\\IGEM\\Cyclotide-malaria\\Malarial-peptides\\pdb-ids.txt'
-
-
-with open(path, 'r') as file:
-    pdb_id = file.read().split(',')
+path = 'D:\\IGEM\\Cyclotide-malaria\\Malarial-peptides\\pdb-ids.csv'   ### Path of csv file containing all pdb-ids downloaded from PDB-advanced-search-options
+with open(path, 'r') as file:    ### reading the file with a context manager
+    pdb_id = file.read().split(',')     ### create a list containing pdb-ids
+    
+    
+m = len(pdb_id)   ### length of pdb_id list ie no of pdb_ids
+    
+   
 
 PDB_ID, Desc, Classification, Exp_system, Method, Lit, Pubmed_id, Pubmed_abs, Org1, Mmol, Org2, Mut, Res = [
 ], [], [], [], [], [], [], [], [], [], [], [], []
 
 
-for i in range(200, len(pdb_id)):
+for i in range(m, len(pdb_id)):
     url = 'https://www.rcsb.org/structure/'+pdb_id[i]
 
     source = requests.get(url).text
@@ -111,7 +114,7 @@ for i in range(200, len(pdb_id)):
         Res.append(None)
 
 
-null_data = {'PDB_ID': PDB_ID,
+dataframe_dict = {'PDB_ID': PDB_ID,
              'Description': Desc,
              'Classification': Classification,
              'Expression-System': Exp_system,
@@ -127,6 +130,6 @@ null_data = {'PDB_ID': PDB_ID,
              }
 
 with open('D:\\IGEM\\Cyclotide-malaria\\Malarial-peptides\\null_data2.txt', 'w') as f:
-    f.write(json.dumps(null_data))
+    f.write(json.dumps(dataframe_dict))    ### Dump data as .json file
 
-test_df = pd.DataFrame(null_data)
+test_df = pd.DataFrame(dataframe_dict) ### Create a Dataframe from dictionary ; can we write to a csv or anyother preferred format
