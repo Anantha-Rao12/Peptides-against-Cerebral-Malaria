@@ -2,7 +2,7 @@ import os
 import subprocess
 import time
 import pandas as pd
-#from chimera import runCommand as rc  
+from chimera import runCommand as rc  #used for saturated mutagenesis function; comment out if not running with chimera
 
 
 def saturated_mutagenesis(model_no,chain_name,start_residue,stop_residue,input_path,file_name,output_path):
