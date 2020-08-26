@@ -8,7 +8,7 @@ def get_centroid(pdb_file, chain_name):
             
     pattern = re.compile(regexp)
 
-    atomic_wt_dict = { 'N'  : 28, 'O' : 32 , 'S' : 64 , 'C' : 12}
+    atomic_wt_dict = { 'H' : 1, 'C' : 12, 'N'  : 14, 'O' : 16 , 'S' : 32}
             
     with open(pdb_file,'r') as rf:
         contents = rf.read()
