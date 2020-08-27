@@ -14,9 +14,18 @@ PDB_centroid_analyser basically reads through a .pdb file and captures all lines
   
 ![Regex Diagram](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/blob/master/MD-simulation/MD-results-analysis/regex.svg)
 
+
+Here : 
+ - Atom no -->  match.group(2)
+ - Chain name --> match.group(4)
+ - X co-ordinates --> match.group(6)+match.group(7)
+ - Y co-ordinates --> match.group(9)+match.group(10)
+ - Z co-ordinates --> match.group(12)+match.group(13)
+ - Atom -->  match.group(15)
+
 After reading these lines, the function get_centroid() obtains the centroid (x,y,z) of a given chain. We perform calculations in numpy arrays using the standard centroid formula: 
 
-**Centroid = sum( w[i] * r[i] ) / sum(w[i])** 
+   **Centroid = sum( w[i] * r[i] ) / sum(w[i])** 
   
 A wrapper function, **main()** calls other multiple functions to determine the distance between the centroid of two chains using euclidean_distance(). This is done for all the .pdb files submitted in the text file. *Special care* has to be taken to ensure that all .pdb files are in the official presribed format, otherwise the regex syntax will not be able to identify the chain, atom or element. Finally the script writes a .csv file in the same directory which includes the following fields:
 
