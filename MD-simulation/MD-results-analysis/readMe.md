@@ -16,12 +16,12 @@ To perform these calculations, I wrote the script PDB_centroid_analyser.
 
 
 Here : 
- - Atom no -->  match.group(2)
- - Chain name --> match.group(4)
- - X co-ordinates --> match.group(6)+match.group(7)
- - Y co-ordinates --> match.group(9)+match.group(10)
- - Z co-ordinates --> match.group(12)+match.group(13)
- - Atom -->  match.group(15)
+ - Atom no -->  group(1)
+ - Chain name --> group(3)
+ - X co-ordinates --> group(5)+group(6)
+ - Y co-ordinates --> group(8)+group(9)
+ - Z co-ordinates --> group(11)+group(12)
+ - Atom -->  group(14)
 
 After reading these lines, the function get_centroid() obtains the centroid (x,y,z) of a given chain. We perform calculations in numpy arrays using the standard centroid formula: 
 
