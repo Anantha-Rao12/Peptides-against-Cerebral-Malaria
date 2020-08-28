@@ -42,7 +42,7 @@ def ewa(array,beta):
 def ewa_array(array):
 
     ''' This is a custom function I wrote that uses ewa() and returns 3 arrays  
-    that average the given array over the time periods of 13, 55, 144. These
+    that average the given array over the time periods of 8, 34, 89. These
     calues were chosen because they are fibonacci values of interest that 
     correspond well with the timeframe of my MD simulation (100ns)'''
 
