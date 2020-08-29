@@ -3,7 +3,7 @@ Insilico modeling and design of Peptide Drugs against Falciparum Cerebral malari
 
 This repository contains files, scripts, and summaries that were a part of my summer-cum-fall semester project at IISER Pune in 2020. The project is interdisciplinary in nature and borrows ideas from the fields of structural biology, computational biophysics, and computational chemistry. My project was part of the [iGEM IISER Pune 2020](https://2020.igem.org/Team:IISER-Pune-India) Team Project where we had a team of 10+ people tackling the problem of malaria from every aspect (experiments, human practices, creating social awareness etc). More about what we achieved can be found here.
 
-The goal of my project was to design peptide inhibitors against the DBLb domain of PF11_0521 PfEMP1 (Plasmodium falciparum Erythrocyte Membrane Protein 1 ), a membrane protein found on the cell-surface of malaria-infected erythrocytes (red blood cells). Lennartz et al characterized the interaction of PfEMP1 with Human ICAM1 (Intercellular Adhesion Molecule 1), an endothelial receptor, and reported their findings in [this](https://doi.org/10.1016/j.chom.2017.02.009) 2017 paper. My work (primarily computational) is based on that and a subsequent 2019 paper ([link](https://doi.org/10.1073/pnas.1911900116)). 
+The goal of my project was to design peptide inhibitors against the DBLb domain of PF11_0521 PfEMP1 (Plasmodium falciparum Erythrocyte Membrane Protein 1 ), a membrane protein found on the cell-surface of malaria-infected erythrocytes (red blood cells). The attachment of PfEMP1 with ICAM1 allows infected erytrocytes to cross the blood-brain barrier and deposit clumped erythrocytes in the brain. This results in an advanced stage of Malaria called Cerebral Malaria that is characterised by seizures, coma and severe brain damage. Lennartz et al characterized the interaction of PfEMP1 with Human ICAM1 (Intercellular Adhesion Molecule 1), an endothelial receptor, and reported their findings in [this](https://doi.org/10.1016/j.chom.2017.02.009) 2017 paper. My work (primarily computational) is based on that and [this](https://doi.org/10.1073/pnas.1911900116) subsequent 2019 paper. 
 
 The computational aspects of the project (related files you can find on this repository) are the following: 
 
@@ -30,4 +30,7 @@ I hope that the scripts I wrote will benefit someone who is trying to solve a si
 
 Have a good day! 
 
-For clarifications and queries -- [Anantha Rao](mailto:anantha.rao@students.iiserpune.ac.in?subject=[PACMal]%20Source%20Han%20Sans)
+
+<br><br>
+<br><br>
+For clarifications and queries -- [Anantha Rao](mailto:anantha.rao@students.iiserpune.ac.in?subject=[PACMal]%20Source%20Han%20Sans) @2020
