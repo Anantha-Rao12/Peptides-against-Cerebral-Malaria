@@ -30,4 +30,4 @@ I hope that the scripts I wrote will benefit someone who is trying to solve a si
 
 Have a good day! 
 
-For clarifications and queries -- (Anantha Rao)[mailto:anantha.rao@students.iiserpune.ac.in?subject=[PACMal]%20Source%20Han%20Sans]
+For clarifications and queries -- [Anantha Rao](mailto:anantha.rao@students.iiserpune.ac.in?subject=[PACMal]%20Source%20Han%20Sans)
