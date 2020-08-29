@@ -11,7 +11,7 @@ The goal of my project was to design peptide inhibitors against the *DBLb domain
 
 2. I performed a technique called **Saturated Mutagenesis** (Technically, Computational Saturated Mutagenesis), where I had to mutate a specific residue in a given peptide sequence to all the other 19 kinds of natural amino acids. For example, if the given primary sequence was: <br>
     --**GALMFWAS**--
-    - The objective was to obtain all amino acid sequences that differ from the given sequence by only 1 amino acid (**AALMFWAS**, **CALMFWAS** ...) .This involves replacing each residue by every other natural amino acid. I used a Python script that worked on top of Chimera, for the same. Further details can be found [here](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/blob/master/Preprocessing-data/preprocessing-functions.py).
+    - The objective was to obtain all amino acid sequences that differ from the given sequence by only 1 amino acid (**AALMFWAS**, **CALMFWAS** ... etc) .This involves replacing each residue by every other natural amino acid. I used a Python script that worked on top of Chimera, for the same. Further details can be found [here](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/blob/master/Preprocessing-data/preprocessing-functions.py).
 
 3. I scored each mutant obtained from step 2, using [foldx](http://foldxsuite.crg.eu/). This was performed with a bash script which can be found [here](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/tree/master/SM-and-scoring-analysis/Param-scripts). 
 
@@ -32,7 +32,6 @@ Have a good day!
 
 
 
-
 <br><br>
 <br><br>
-For clarifications and queries -- [Anantha Rao](mailto:anantha.rao@students.iiserpune.ac.in?subject=[PACMal]%20Source%20Han%20Sans) @2020
+For clarifications and queries -- [Anantha Rao](mailto:anantha.rao@students.iiserpune.ac.in?subject=[PACMal]) @2020
