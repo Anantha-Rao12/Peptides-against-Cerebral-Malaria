@@ -12,7 +12,7 @@ To perform these calculations, I wrote the script PDB_centroid_analyser.
 
 [PDB_centroid_analyser](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/blob/master/MD-simulation/MD-results-analysis/PDB_centroid_analyser) basically reads through a .pdb file and captures all lines containing "ATOM .... \<element name\>". This is performed using Python regular expressions. The railroad diagram of the regex code is as follows: 
   
-![Regex Diagram](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/blob/master/MD-simulation/MD-results-analysis/regex.svg)
+![Regex Diagram](https://github.com/Anantha-Rao12/Peptides-against-Cerebral-Malaria/blob/master/MD-simulation/Centroid-analysis/regex.svg)
 
 
 Here : 
