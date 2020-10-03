@@ -1,4 +1,4 @@
-# Computing the number of Hydroogen Bonds 
+# Computing the Hydrogen Bond Profile
 
 The bash script hbond-analyzer is a wrapper-script containing functions built over Chimera and uses the --nogui flag to run it without the graphical user interface.
 
