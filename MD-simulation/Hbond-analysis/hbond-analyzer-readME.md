@@ -1,8 +1,8 @@
 # Computing the Hydrogen Bond Profile
 
 ## Objective :
-- Given a .pdb file, we use ```Hbond-analyzer.sh``` along with the ```hbond-script.cmd``` to obtain a ```{}_hbond_info.txt``` file. This contains information about the hydrogen bonds in the given .pdb file
-- The python script ```PDB_Hbond_analyser.py ``` reads through the ```{}_hbond_info.txt``` file and returns a .csv file with a structured dataframe format that can be used for further analysis. 
+- Given a .pdb file, we use ```Hbond-analyzer.sh``` along with the ```hbond-script.cmd``` to obtain a ```{}_hbond_info.txt``` file. This contains information about the hydrogen bonds in the given .pdb file. We do this for multiple .pdb files
+- The python script ```PDB_Hbond_analyser.py ``` reads through multiple ```{}_hbond_info.txt``` files and returns a .csv file with a structured dataframe format that can be used for further analysis. 
 
 
 ## ```Hbond-analyzer.sh```
