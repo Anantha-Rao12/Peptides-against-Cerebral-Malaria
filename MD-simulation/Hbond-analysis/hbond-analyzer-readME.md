@@ -12,6 +12,8 @@ The Script takes two arguments :
 1. A text file containing .pdb files that are to be analysed (must be in the same directory as the script and .pdb files)
 2. A .cmd file containing chimera commands
 
+**Note** : It is assumed that the chimera executable file is stored at ```~/chimera/bin/chimera```. If not the path to the executable has to be specified in line 11 
+
 The commands to be run in chimera is submitted in a .cmd file, with each line containing the command based on chimera documentation. 
 
 ### Working
