@@ -66,7 +66,7 @@ if __name__ == '__main__':
     if len(sys.argv) != 3:
         print("\nERROR")
         print("Incorrect number of arguments submitted, expecting only 2")
-        print("1. Text file containing pdb file names and output .csv filename")
+        print("1. Text file containing _hbond_info.txt file names and output .csv filename")
         print("NOTE : All files and this executable must be in the same directory")
     else:
         df = main()
